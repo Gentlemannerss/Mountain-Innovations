@@ -19,23 +19,71 @@
         <div class="section skills">
             <h2>Skills</h2>
             <ul>
-                <li>Web Development (HTML, CSS, JavaScript, React, Angular)</li>
-                <li>Backend Development (Node.js, Express, PHP, Python)</li>
-                <li>Database Management (MySQL, MongoDB, PostgreSQL)</li>
-                <li>IT Support and Consulting</li>
-                <li>Cloud Services (AWS, Azure, Google Cloud)</li>
-                <li>Network Setup and Maintenance</li>
+                <li onclick="toggleInfo('skill1')">Web Development (HTML, CSS, JavaScript, React, Angular)
+                    <div class="info" id="skill1">
+                        <p>Details about web development...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('skill2')">Backend Development (Node.js, Express, PHP, Python)
+                    <div class="info" id="skill2">
+                        <p>Details about backend development...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('skill3')">Database Management (MySQL, MongoDB, PostgreSQL)
+                    <div class="info" id="skill3">
+                        <p>Details about database management...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('skill4')">IT Support and Consulting
+                    <div class="info" id="skill4">
+                        <p>Details about IT support and consulting...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('skill5')">Cloud Services (AWS, Azure, Google Cloud)
+                    <div class="info" id="skill5">
+                        <p>Details about cloud services...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('skill6')">Network Setup and Maintenance
+                    <div class="info" id="skill6">
+                        <p>Details about network setup and maintenance...</p>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="section services">
             <h2>Services</h2>
             <ul>
-                <li>Custom Website Development</li>
-                <li>Responsive Web Design</li>
-                <li>eCommerce Solutions</li>
-                <li>IT Support and Troubleshooting</li>
-                <li>Cloud Migration and Management</li>
-                <li>Network Setup and Security</li>
+                <li onclick="toggleInfo('service1')">Custom Website Development
+                    <div class="info" id="service1">
+                        <p>Details about custom website development...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('service2')">Responsive Web Design
+                    <div class="info" id="service2">
+                        <p>Details about responsive web design...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('service3')">eCommerce Solutions
+                    <div class="info" id="service3">
+                        <p>Details about eCommerce solutions...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('service4')">IT Support and Troubleshooting
+                    <div class="info" id="service4">
+                        <p>Details about IT support and troubleshooting...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('service5')">Cloud Migration and Management
+                    <div class="info" id="service5">
+                        <p>Details about cloud migration and management...</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('service6')">Network Setup and Security
+                    <div class="info" id="service6">
+                        <p>Details about network setup and security...</p>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="section contact">
@@ -59,5 +107,6 @@
         </div>
     </div>
     <script src="/js/toggleTheme/toggleTheme.js"></script>
+    <script src="/js/toggleInfo/toggleInfo.js"></script>
 </body>
 </html>

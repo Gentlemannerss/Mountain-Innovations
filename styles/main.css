@@ -6,31 +6,52 @@ body {
     color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
+
 header {
     background-color: #007bff;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
+
 .container {
     padding: 20px;
 }
+
 .section {
     margin-bottom: 20px;
 }
+
 .section h2 {
     color: #007bff;
 }
+
 .skills ul, .services ul {
     list-style-type: none;
     padding: 0;
 }
+
 .skills li, .services li {
     background-color: #e9ecef;
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+    position: relative;
 }
+
+.skills li:hover, .services li:hover {
+    background-color: #d1e7fd;
+}
+
+.info {
+    display: none;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
 .toggle-theme {
     position: fixed;
     top: 20px;
@@ -42,33 +63,41 @@ header {
     cursor: pointer;
     border-radius: 5px;
 }
+
 .dark-theme {
     background-color: #333;
     color: #f0f4f8;
 }
+
 .dark-theme header {
     background-color: #444;
 }
+
 .dark-theme .toggle-theme {
     background-color: #444;
     color: #fff;
 }
+
 .dark-theme .section h2 {
     color: #00aaff;
 }
+
 .dark-theme .skills li, .dark-theme .services li {
     background-color: #555;
 }
+
 form {
     background-color: #e9ecef;
     padding: 20px;
     border-radius: 5px;
 }
+
 form label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
+
 form input, form textarea {
     width: 100%;
     padding: 10px;
@@ -76,6 +105,7 @@ form input, form textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 form button {
     background-color: #007bff;
     color: #fff;
@@ -84,6 +114,7 @@ form button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 form button:hover {
     background-color: #0056b3;
 }
@@ -111,12 +142,6 @@ form button:hover {
     form {
         padding: 30px;
     }
-    form input, form textarea {
-        padding: 15px;
-    }
-    form button {
-        padding: 15px 30px;
-    }
 }
 
 @media screen and (min-width: 992px) {
@@ -140,11 +165,5 @@ form button:hover {
     }
     form {
         padding: 40px;
-    }
-    form input, form textarea {
-        padding: 20px;
-    }
-    form button {
-        padding: 20px 40px;
     }
 }
