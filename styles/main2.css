@@ -358,14 +358,14 @@ form {
     margin-bottom: 1em;
 }
 
-#name, #email, #message {
+#name, #email, #message, #phone {
     padding: .75rem;
     border: transparent;
     border-radius: 5px;
     font-size: .8rem;
 }
 
-#email, #name {
+#email, #name, #phone {
     margin-bottom: 1rem;
 }
 
