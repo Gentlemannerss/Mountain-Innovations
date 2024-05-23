@@ -1,19 +1,125 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusable
+        3.2 Specific
+    4. Areas
+        4.1 Header
+            4.1.1 Navigation Bar
+            4.1.2 Hero Section
+        4.2 Main
+        4.3 Footer
+            4.3.1 Form
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@100;300&display=swap');
+
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /*border: 1px solid red;*/
+}
+
+body {
+    min-height: 100vh;
     background-color: #f0f4f8;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p, li {
+    font-size: 1rem;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+.toggle-theme {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.toggle-theme:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f0f4f8;
+}
+
+body.dark-theme header {
+    background-color: #444;
+}
+
+body.dark-theme .toggle-theme {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-theme .section h2 {
+    color: #00aaff;
+}
+
+body.dark-theme .skills li,
+body.dark-theme .services li {
+    background-color: #555;
+}
+
+body.dark-theme footer {
+    background-color: #333;
+    color: #f0f4f8;
+}
+/* ---------------------- 3.1 Reusable ----------------------- */
+.outerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.innerContainer {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* ---------------------- 3.2 Specific ------------------------ */
 .container {
     padding: 20px;
 }
@@ -22,8 +128,10 @@ header {
     margin-bottom: 20px;
 }
 
-.section h2 {
-    color: #007bff;
+.skills, .services {
+    flex: 1;
+    margin: 1rem;
+    position: relative;
 }
 
 .skills ul, .services ul {
@@ -52,18 +160,76 @@ header {
     margin-top: 10px;
 }
 
-.toggle-theme {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+/* ------------------------------- 4. Areas ---------------------------------------- */
+/* ---------------------- 4.1 Header -------------------------- */
+header {
     background-color: #007bff;
     color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+header > div {
+    margin-top: 20px;
+}
+
+/* --------------- 4.1.1 Navigation Bar ---------------- */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #007bff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.toggle-theme {
+    background-color: #fff;
+    color: #007bff;
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
+/* --------------- 4.1.2 Hero Section ------------------ */
+header div h1 {
+    margin: 10px 0;
+}
+
+header div p {
+    margin-bottom: 20px;
+}
+
+.workTogether {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ---------------------- 4.2 Main ---------------------------- */
 .dark-theme {
     background-color: #333;
     color: #f0f4f8;
@@ -86,6 +252,26 @@ header {
     background-color: #555;
 }
 
+/* Add background text for Skills and Services */
+.skills::after, .services::after {
+    content: "Skills & Services";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+/* ---------------------- 4.3 Footer -------------------------- */
+footer {
+    background-color: #333;
+    color: #f0f4f8;
+    padding: 20px;
+    text-align: center;
+}
+/* --------------- 4.3.1 Form ----------------------- */
 form {
     background-color: #e9ecef;
     padding: 20px;
@@ -119,14 +305,58 @@ form button:hover {
     background-color: #0056b3;
 }
 
-/* Responsive Design */
-@media screen and (min-width: 768px) {
-    html {
-        background-color: #f69051;
+.contact ul {
+    list-style: none;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+/* Small phones */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px;
     }
-    p {
-        font-size: 1.2rem;
+    nav ul {
+        flex-direction: column;
     }
+    .toggle-theme {
+        margin: 10px 0;
+    }
+    .container {
+        padding: 10px;
+    }
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    .skills li, .services li {
+        padding: 8px;
+    }
+    form {
+        padding: 15px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    .container {
+        padding: 15px;
+    }
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    .skills li, .services li {
+        padding: 10px;
+    }
+    form {
+        padding: 20px;
+    }
+}
+
+/* Small laptops */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
     header {
         padding: 30px;
     }
@@ -144,26 +374,33 @@ form button:hover {
     }
 }
 
-@media screen and (min-width: 992px) {
-    html {
-        background-color: #F26D40;
-    }
-    p {
-        font-size: 1.6rem;
-    }
+/* Large screens */
+@media screen and (min-width: 1200px) {
     header {
-        padding: 40px;
+        padding: 50px;
     }
     .container {
-        padding: 40px;
+        padding: 50px;
     }
     .section h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .skills li, .services li {
-        padding: 20px;
+        padding: 25px;
     }
     form {
-        padding: 40px;
+        padding: 50px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .skills, .services {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .skills ul, .services ul {
+        width: 100%;
     }
 }

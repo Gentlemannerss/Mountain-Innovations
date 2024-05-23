@@ -1,0 +1,457 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Specific
+    4. Areas
+        4.1 Header
+            4.1.1 Navigation Bar
+            4.1.2 Hero Section
+        4.2 Main
+            4.2.1 Introduction
+            4.2.2 Projects
+            4.2.3 Services
+            4.2.4 Form
+        4.3 Footer
+            4.3.1 Footer Bar
+    5. Media Queries
+////////////////////////*/
+
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /*border: 1px solid red;*/
+}
+
+:root {
+    --purple-color: #5722CD;
+    --blue-color: #4845E4;
+    --pink-color: #ED4385;
+    --black-color: #0C0C0C;
+    --lightpurple-color: #F2F0FF;
+    --lightgrey-color: #F3F6F9;
+    --grey-color: #7A7A7A;
+}
+
+body {
+    min-height: 100vh;
+}
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+/* ---------------------- 3.1 Reusables ----------------------- */
+
+.outerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.innerContainer {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+/* ---------------------- 3.2 Specific ------------------------ */
+/* ------------------------------- 4. Areas ---------------------------------------- */
+.dark-theme {
+    background-color: #333;
+    color: #f0f4f8;
+}
+
+.dark-theme header {
+    background-color: #444;
+}
+
+.dark-theme .toggle-theme {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-theme .section h2 {
+    color: #00aaff;
+}
+
+.dark-theme .skills li, .dark-theme .services li {
+    background-color: #555;
+}
+/* ---------------------- 4.1 Header -------------------------- */
+header, #contactUs {
+    background: linear-gradient(320deg, rgba(87,34,205,1) 18%, rgba(72,69,228,1) 44%);
+    color: white;
+    position: relative;
+    isolation: isolate;
+}
+
+/*------Bonus : Texture noise on background-------*/
+header::after,
+#contactUs::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background-image: url("../assests/noise-texture.png");
+    opacity: 0.9;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    margin-right: 3rem;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+}
+
+header > section {
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+}
+
+header > section > div > h1 {
+    font-size: 2rem;
+}
+
+.workTogether {
+    background-color: var(--pink-color);
+    font-size: 0.7em;
+    padding: 15px;
+    margin-top: 1em;
+    border-radius: 35px;
+    width: 10rem;
+    border: none;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
+    text-transform: uppercase;
+    align-self: center;
+    cursor: pointer;
+}
+
+.workTogether:active {
+    background-color: #fc7bff;
+}
+
+.image-squiggle-stripe {
+    background-image: url(../assests/squiggle_line_stripe.svg);
+    position: absolute;
+    width: 79px;             /* REM Units*/
+    height: 80px;            /* REM Units*/
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+
+header > section > .innerContainer::before {
+    content: '';
+    border-style: solid;
+    border-width: 50px 98vw 33px 0; /* adjust the border-width values to change the size of the triangle */
+    border-color: transparent transparent white transparent; /*color*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* --------------- 4.1.1 Navigation Bar ---------------- */
+/* --------------- 4.1.2 Hero Section ------------------ */
+/* ---------------------- 4.2 Main ---------------------------- */
+/* --------------- 4.2.1 Introduction ------------------ */
+.introduction {
+    color: var(--blue-color);
+    padding: 3em 0;
+    isolation: isolate;
+}
+
+.introduction > div > p {
+    color: var(--black-color);
+    padding-top: 1em;
+}
+
+.introduction::before {
+    content: "hello";
+    position: absolute;
+    z-index: -1;
+    color: var(--lightpurple-color);
+    opacity: 0.8;
+
+    font-size: 15rem;
+    font-weight: bold;
+}
+
+
+/* --------------- 4.2.2 Publications ---------------------- */
+.publications {
+    padding: 10em 0 3em 0;
+    position: relative;
+    isolation: isolate;
+}
+
+.publications::before {
+    content: "work";
+    position: absolute;
+    z-index: -1;
+    color: white;
+    opacity: 0.8;
+    top: .2rem;
+    font-size: 15rem;
+    font-weight: bold;
+}
+
+.publications::after {
+    content: '';
+    background-color: var(--lightgrey-color);
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    transform: skewY(3deg);
+}
+
+.publications > div > article {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.publications > div > article:nth-of-type(even) {
+    flex-direction: row-reverse;
+    padding-left: 1rem;
+}
+
+.publications a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .75rem;
+    color: var(--blue-color);
+    text-decoration: none;
+}
+
+.textWrapper {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
+    gap: 2rem;
+    margin: 2rem;
+    position: relative;
+    text-align: left;
+}
+.image-squiggle-line {
+    background-image: url(../assests/squiggle_line.svg);
+    position: absolute;
+    width: 55px;            /* REM Units*/
+    height: 6px;            /* REM Units*/
+    top: 40px;              /* REM Units*/
+}
+
+.textWrapper h3 {
+    padding-bottom: 1rem;
+}
+
+.image-wrapper {
+    flex: 0 1 auto;
+}
+
+.image-wrapper > img {
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* --------------- 4.2.3 Services ---------------------- */
+.outerContainerSpecial .innerContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: normal;
+}
+
+.allKindOfServices {
+    padding: 10em 3em 2em 3em;
+    position: relative;
+    isolation: isolate;
+}
+
+.allKindOfServices::before {
+    content: "services";
+    position: absolute;
+    z-index: -1;
+    color: var(--lightpurple-color);
+    opacity: 0.8;
+    font-size: 15em;
+    font-weight: bold;
+    top: 0;
+}
+
+.services {
+    border: 1px solid var(--blue-color);
+    background-color: white;
+    opacity: 0.9;
+    flex: 0 1 300px;
+    padding: 1rem;
+    box-shadow: 0 5px 10px lightgrey;
+}
+
+.services > img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.services h4 {
+    color: var(--blue-color);
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+
+/*------- Making sure the line will move under a link --------*/
+.publications a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 6px;
+    background-image: url(../assests/squiggle_line.svg);
+    /*background-color: var(--blue-color);*/
+    transition: width .35s ease-in-out;
+}
+
+.publications a:hover::after {
+    width: 55px;
+    background-repeat: no-repeat;
+}
+/* --------------- 4.2.4 Form -------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+}
+
+.formContainer > button {
+    margin-top: 2rem;
+}
+
+.formContainer > label {
+    font-size: .75rem;
+    font-weight: bolder;
+    margin-bottom: 1em;
+}
+
+#name, #email, #message {
+    padding: .75rem;
+    border: transparent;
+    border-radius: 5px;
+    font-size: .8rem;
+}
+
+#email, #name {
+    margin-bottom: 1rem;
+}
+
+.theForm {
+    padding: 4rem 0 2rem 0;
+    position: relative;
+    isolation: isolate;
+}
+
+/* ---------------------- 4.3 Footer -------------------------- */
+/* --------------- 4.3.1 Footer Bar -------------------- */
+.samStyling {
+    border-style: solid;
+    border-width: 0 98vw 33px 0;
+    border-color: transparent white transparent transparent;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+footer {
+    background-color: var(--black-color);
+    color: white;
+    padding: 15px;
+    font-size: 10px;
+}
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media  screen and (max-width: 990px) {
+    .allKindOfServices::before,
+    .publications::before,
+    .introduction::before {
+        font-size: 10em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .allKindOfServices::before,
+    .publications::before,
+    .introduction::before {
+        font-size: 8em;
+    }
+}
+
+@media  screen and (max-width: 500px) {
+    html {
+        font-size: 10px;
+    }
+
+    .allKindOfServices::before,
+    .publications::before,
+    .introduction::before {
+        font-size: 5em;
+    }
+
+    nav {
+        justify-content: space-evenly;
+        padding-top: 1rem;
+        margin-right: 0;
+    }
+
+    .textWrapper {
+        margin: .5rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .image-squiggle-line {
+        top: 25px;
+    }
+
+    .image-squiggle-stripe {
+        height: 40px;
+    }
+
+    #caseStudies > div > article {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .allKindOfServices::before,
+    .publications::before,
+    .introduction::before {
+        font-size: 4em;
+    }
+}

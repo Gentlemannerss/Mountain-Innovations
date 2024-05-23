@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain-Innovations</title>
+    <link rel="stylesheet" href="/styles/main2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#caseStudies">Case Studies</a>
+            <a href="#services">Services</a>
+            <a href="#contactUs">Contact US</a>   
+            <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+        </nav>
+        <section class="outerContainer">
+            <div class="innerContainer">
+              <h1>Your website is an investment in the succes of your buisness</h1>
+              <p>Mountain-Innovations are here to help you succeed.</p>
+              <button type="button" class="workTogether">Let's work together</button>
+            </div>
+          </section>
+    </header>
+    <main>
+
+        <section class="introduction outerContainer">
+            <div class="innerContainer">
+                <h3>Mountain-Innovations is a digital agency in Eindhoven.</h3>
+                <h3>We are specialized in web development and beautiful visual designs to help your business grow.</h3>
+                <h3>We see every project as a fresh opportunity, pushing ourselves to create new digital experiences. </h3>
+            </div>
+        </section>
+
+        <section class="allKindOfServices outerContainerSpecial" id="services">
+            <div class="innerContainer">
+                <article class="services">
+                    <img src="assests/icon_web-design.svg" alt="web design">
+                    <h4>Web Design</h4>
+                    <p>Good web design is how companies stand out from their competitors. High quality web design leads to increased user conversion and engagement. Through a proven web design process, we help clients launch websites and products that improve on their bottom line.</p>
+                </article>
+                <article class="services">
+                    <img src="assests/icon_web-development.svg" alt="web development">
+                    <h4>Web Development</h4>
+                    <p> Modern websites need to be responsive and fully functional at all sizes. We develop all of our sites with a mobile first approach and ensure that our code quality is clean, organized and performant. Already have a design but need it developed? We’re here to help!</p>
+                </article>
+                <article class="services">
+                    <img src="assests/icon_ux.svg" alt="userExpierence">
+                    <h4>Modern Workplace</h4>
+                    <p>In order to build a successful buisness you are in need to always be able to work, if you are at home or on the go. We are here to make sure you are equipped for the situation.</p>
+                </article>
+                <article class="services">
+                    <img src="assests/icon_graphic-design.svg" alt="designBranding">
+                    <h4> You're IT support</h4>
+                    <p>We are here to help you with the problems you encounter with the workplace or website. With our servicedesk we are always ready to support you!</p>
+                </article>
+                <article class="services">
+                    <img src="assests/icon_seo.svg" alt="SEO">
+                    <h4>Search Exposure</h4>
+                    <p>Do you want your site to rank higher in search results? Google is constantly changing their algorithms for how they rank pages. Don’t worry about constantly playing catch-up. We will make sure your website it optimized, providing you the best opportunities for organic search exposure.</p>
+                </article>
+                <article class="services">
+                    <img src="assests/icon_copywriting.svg" alt="copyWriting">
+                    <h4>Cloud Services</h4>
+                    <p>In the current way of working you can't go around the cloud services that are provided, to store you're data, etc etc.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="publications outerContainer" id="caseStudies">
+            <div class="innerContainer">
+                <article>
+                    <div  class="textWrapper">
+                        <h3>Rolling Stone</h3>
+                        <div class="image-squiggle-line">
+                        </div>
+                        <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global icon.</p>
+                        <a href="#">view project</a>
+                    </div>
+                    <span class="image-wrapper">
+                        <img src="assests/work-image-01.jpeg" alt="Picture of a laptop with the site of Rolling Stone">
+                    </span>
+                </article>
+                <article>
+                    <div class="textWrapper">
+                        <h3>Variety</h3>
+                        <div class="image-squiggle-line">
+                        </div>
+                        <p>Variety is an industry leader for breaking entertainment news, reviews and box office results with archive of content dating back to 1905.</p>
+                        <a href="#">view project</a>
+                    </div>
+                    <span class="image-wrapper">
+                        <img src="assests/work-image-02.jpeg" alt="Picture of a book called Variety">
+                    </span>
+                </article>
+                <article>
+                    <div class="textWrapper">
+                        <h3>Worth</h3>
+                        <div class="image-squiggle-line">
+                        </div>
+                        <p>A global media platform connecting a community that embraces worth beyond wealth.</p>
+                        <a href="#">view project</a>
+                    </div>
+                    <span class="image-wrapper">
+                                <img src="assests/work-image-03.jpeg" alt="Image of some papers and quote 500">
+                                </span>
+                </article>
+            </div>
+        </section>
+
+        <section class="theForm outerContainer" id="contactUs">
+            <div class="samStyling"></div>
+                <div class="innerContainer">
+                    <h3>Let's work together</h3>
+                    <p>Have a question? Need some help? Let us know!</p>
+                    <form action="https://formspree.io/f//mbjnekzd" method="POST" class="formContainer">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="full-name" placeholder="Full name">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="e-mail" placeholder="Email">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" cols="30" rows="10" placeholder="You're message or question here."></textarea>
+                        <button type="submit" value="submit" class="workTogether">Send</button>
+                    </form>
+                </div>
+            </section>
+    </main>
+</body>
+<script src="/js/toggleTheme/toggleTheme.js"></script>
+<footer>
+    <section class="outerContainer">
+        <div class="innerContainer">
+            <div class="footerLogo">
+                <img src="assests/logo.svg" alt="Mountain-Innovations logo">
+            </div>
+            <div class="footerNav">
+                <nav>
+                    <a href="#caseStudies">Case Studies</a>
+                    <a href="#services">Services</a>
+                    <a href="#contactUs">Contact US</a>
+                </nav>
+            </div>
+            <div class="footerContent">
+                <p>&copy; 2024 Mountain-Innovations. All rights reserved.</p>
+            <div class="footerSocial">
+                <a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/johndoe" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </section>
+</footer>
+</html>
