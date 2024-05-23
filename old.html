@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain-innovations</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#caseStudies">Case Studies</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contactus">Contact us</a></li>
+            </ul>
+            <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+        </nav>
+        <div>
+            <h1>Welcome to Mountain Innovations</h1>
+            <p>Innovative IT Solutions for Your Business</p>
+            <button class="workTogether" onclick="location.href='#contactus'">Let's Work Together</button>
+        </div>
+    </header>
+    <div class="container outerContainer">
+        <div class="innerContainer">
+            <div class="section">
+                <h2>About Me</h2>
+                <p>Hello! I'm John Doe, an experienced IT Specialist and Web Developer with a passion for creating efficient and effective solutions for businesses and individuals. With a strong background in IT and web development, I offer a wide range of services to meet your technological needs.</p>
+            </div>
+            <div class="skills services-section">
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li onclick="toggleInfo('skill1')">Web Development (HTML, CSS, JavaScript, React, Angular)
+                            <div class="info" id="skill1">
+                                <p>Details about web development...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('skill2')">Backend Development (Node.js, Express, PHP, Python)
+                            <div class="info" id="skill2">
+                                <p>Details about backend development...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('skill3')">Database Management (MySQL, MongoDB, PostgreSQL)
+                            <div class="info" id="skill3">
+                                <p>Details about database management...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('skill4')">IT Support and Consulting
+                            <div class="info" id="skill4">
+                                <p>Details about IT support and consulting...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('skill5')">Cloud Services (AWS, Azure, Google Cloud)
+                            <div class="info" id="skill5">
+                                <p>Details about cloud services...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('skill6')">Network Setup and Maintenance
+                            <div class="info" id="skill6">
+                                <p>Details about network setup and maintenance...</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services">
+                    <h2>Services</h2>
+                    <ul>
+                        <li onclick="toggleInfo('service1')">Custom Website Development
+                            <div class="info" id="service1">
+                                <p>Details about custom website development...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('service2')">Responsive Web Design
+                            <div class="info" id="service2">
+                                <p>Details about responsive web design...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('service3')">eCommerce Solutions
+                            <div class="info" id="service3">
+                                <p>Details about eCommerce solutions...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('service4')">IT Support and Troubleshooting
+                            <div class="info" id="service4">
+                                <p>Details about IT support and troubleshooting...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('service5')">Cloud Migration and Management
+                            <div class="info" id="service5">
+                                <p>Details about cloud migration and management...</p>
+                            </div>
+                        </li>
+                        <li onclick="toggleInfo('service6')">Network Setup and Security
+                            <div class="info" id="service6">
+                                <p>Details about network setup and security...</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section contact" id="contactus">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out to me via email at <a href="mailto:john.doe@example.com">john.doe@example.com</a> or connect with me on social media:</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://twitter.com/johndoe" target="_blank">Twitter</a></li>
+                    <li><a href="https://github.com/johndoe" target="_blank">GitHub</a></li>
+                </ul>
+                <h3>Send me a message</h3>
+                <form action="https://formspree.io/f//mbjnekzd" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/toggleTheme/toggleTheme.js"></script>
+    <script src="/js/toggleInfo/toggleInfo.js"></script>
+</body>
+<footer>
+    <p>&copy; 2024 Mountain-Innovations. All rights reserved.</p>
+</footer>
+</html>

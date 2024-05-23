@@ -109,7 +109,7 @@ header::after,
     height: 100%;
     top: 0;
     z-index: -1;
-    background-image: url("../assests/noise-texture.png");
+    background-image: url("../assets/noise/noise-texture.png");
     opacity: 0.9;
 }
 
